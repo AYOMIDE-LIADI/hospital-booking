@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+ <div id="background" class="bg-[url('https://cdn.pixabay.com/photo/2014/12/10/21/01/doctor-563428_1280.jpg')] w=[580px] h-[584px] bg-cover bg-no-repeat bg-center ">
+     
+     <div class="font-bold text-7xl font-sans text-center text-blue-400 pt-[60px]">
+        <p>BORNIAN <br> PHARMACEUTICALS</p>
+     </div>
+     <div class="mt-[40px] text-center">
+        <button id="book" class="bg-white rounded-sm px-[20px] py-[10px] font-bold">BOOK  AN  APPOINTMENT</button>
+     </div>
+     <div class="mt-[40px] text-center">
+         <button id="emergencyBtn" class="bg-red-500 rounded-sm px-[20px] py-[10px] font-bold">EMERGENCY</button>
+     </div>
+ </div>
+ <form class="hidden"  id="form" >
+    <div>
+        <div class="bg-blue-300 font-bold text-4xl flex">
+            <div class=" ml-[200px] bg-white text-blue-300 pr-[150px]">
+                <p class="py-[35px] px-[45px]">BOOK AN <br> APPOINTMENT</p>
+            </div>
+            <div class="text-white py-[35px] flex gap-[30px] ml-[40px]">
+                <img class="w-[80px]" src="./image/medical.png" alt="">
+                <p >Bornian <br> Pharmaceuticals</p>
+            </div>
+        </div>
+        <div >
+            <div class="px-[270px] py-[70px]">
+                <div class="flex items-center gap-[190px]">
+                    <div>
+                        <p class="font-bold mb-[10px]">NAME</p>
+                        <input id="firstname" class="border-solid border-2 border-black rounded-sm px-[30px]" type="text">
+                        <p id="fnerror" class="hidden text-[9px]">Cannot be Empty</p>
+                        <p class="italic text-gray-400">First Name</p>
+                    </div>
+                    <div>
+                        <input id="lastname" class="border-solid border-2 border-black rounded-sm px-[30px] mt-[35px]" type="text">
+                        <p id="lnerror" class="hidden text-red-500 text-[9px] ">Cannot be Empty</p>
+                        <p class="italic text-gray-400">Last Name</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-[190px] mt-[30px]">
+                    <div>
+                        <p class="font-bold mb-[10px]">PHONE NUMBER</p>
+                        <input id="phonenumber" class="border-solid border-2 border-black rounded-sm px-[30px]" type="text">
+                        <p id="numerror" class=" hidden text-red-500 text-[9px]">Cannot be Empty</p>
+                        <p id="numerror1" class=" hidden text-red-500 text-[9px]">Numbers only</p>
+                        <p class="italic text-gray-400">(0000) 000 000</p>
+                    </div>
+                    <div>
+                        <input id="email" class="border-solid border-2 border-black rounded-sm px-[30px] mt-[35px]" type="email">
+                        <p id="emailerror" class="hidden text-red-500 text-[9px] ">Cannot be Empty</p>
+                        <p class="italic text-gray-400">example@example.com</p>
+                    </div>
+                </div>
+                <div class="mt-[30px] flex gap-[260px]">
+                    <div>
+                        <p class="font-bold mb-[10px]">FIRST TIME VISIT? (optional)</p>
+                        <div>
+                            <input id="checkbox1" type="checkbox"> <span>YES</span>
+                            <p id="checkboxerror1" class="hidden text-red-500 text-[9px] ">Cannot be Empty</p>
+                        </div>
+                        <div>
+                            <input id="checkbox2" type="checkbox"> <span>NO</span>
+                            <p id="checkboxerror2" class="hidden text-red-500 text-[9px] ">Cannot be Empty</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-[10px]">Available Physicians</p>
+                        <select  class="border-solid border-2 border-black rounded-sm" name="" id="doctors">
+                            <option >Select</option>
+                            <option value="Dr Willaim Uchemba">Dr Willaim Uchemba</option>
+                            <option value="Dr Stanley Francis">Dr Stanley Francis</option>
+                            <option value="Dr Wesley Snipes">Dr Wesley Snipes</option>
+                            <option value="Dr Anthony Joshua">Dr Anthony Joshua</option>
+                        </select>
+                        <p id="docerror" class="hidden text-red-500 text-[9px] ">Cannot be Empty</p>
+                    </div>
+                </div>
+                <div class="mt-[30px]">
+                    <p class="font-bold mb-[10px]">SELECT AN APPOINTMENT DATE</p>
+                    <div class="flex gap-[30px]">
+                        <div>
+                            <input id="date" class="border-solid border-2 border-black rounded-sm px-[30px] mt-[10px]" type="date">
+                            <p id="dateerror" class="hidden text-red-500 text-[9px]">Cannot be Empty</p>
+                            <p class="italic text-gray-400">Date</p>
+                        </div>
+                        <div>
+                            <input id="time" class="border-solid border-2 border-black rounded-sm  mt-[10px]" type="time">
+                            <p id="timeerror" class="hidden text-red-500 text-[9px] ">Cannot be Empty</p>
+                            <p class="italic text-gray-400">Time</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-[30px]">
+                    <p class="font-bold mb-[10px]">COMMENTS</p>
+                    <textarea  class="border-solid border-2 border-black py-[30px] px-[260px]" name="" id="comment"></textarea>
+                    <p id="commenterror" class="hidden text-red-500 text-[9px]">Cannot be Empty</p>
+                </div>
+                <button id="submit" class="bg-blue-300 p-[8px] my-[20px] rounded-sm text-white">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+</form>
+ <div id="tranperent" class="hidden bg-black opacity-70 w=[580px] h-[584px] items-center py-[120px] px-[330px] ">
+        <div class="bg-white h-[320px] w-[600px] items-center rounded-lg p-[30px]">
+            <p  class="font-bold mb-[10px] text-3xl">APPOINTMENT RECIEPT</p>
+            <div id="append">
+                <!-- <div class="flex justify-between ">
+                    <p>First Name:  TOSIN </p>
+                    <p>Last Name:  BENGAMIN</p>
+                </div>
+                <div class="flex justify-between mt-[10px]">
+                    <p>Phone number: 00000000000</p>
+                    <p>Email: example@example.com</p>
+                </div>
+                <div class="mt-[20px]">
+                    <p class="font-bold">Appointment:</p>
+                    <div class="flex justify-between ">
+                        <p>Date:10:00 am</p>
+                        <p>Time: 3:00 pm</p>
+                    </div>
+                </div>
+            
+                <p class="font-bold mt-[20px]">Available Physician: <p>Dr. Phillips Emma</p> -->
+            </div>   
+                <div class="flex justify-between align-center">
+                    <div class="flex gap-[10px] mt-[10px] cursor-pointer">
+                        <img class="h-[25px]" src="./image/download-pdf.png" alt="">
+                        <p>Download PDF</p>
+                    </div>
+                    <button id="close" class="bg-gray-300 px-[10px] py-[3px]">CLOSE</button>
+                </div>
+        </div>
+ </div>
+ <form class="hidden" id="form2">
+    <div class="bg-red-500 font-bold text-4xl flex">
+        <div class=" ml-[200px] bg-white text-red-500 pr-[150px]">
+            <p class="py-[60px] px-[45px]">EMERGENCY</p>
+        </div>
+        <div class="text-white py-[35px] flex gap-[30px] ml-[40px]">
+            <img class="w-[80px]" src="./image/medical.png" alt="">
+            <p >Bornian <br> Pharmaceuticals</p>
+        </div>
+    </div>
+    <div  class="px-[270px] py-[70px]">
+        <div class="flex items-center gap-[190px]">
+            <div>
+                <p class="font-bold mb-[10px]">NAME</p>
+                <input id="nameOne" class="border-solid border-2 border-black rounded-sm px-[30px]" type="text">
+                <p id="fnerrorEmg" class="hidden text-[9px]">Cannot be Empty</p>
+                <p class="italic text-gray-400">First Name</p>
+            </div>
+            <div>
+                <input id="nameTwo" class="border-solid border-2 border-black rounded-sm px-[30px] mt-[29px]" type="text">
+                <p id="lnerrorEmg" class="hidden text-[9px]">Cannot be Empty</p>
+                <p class="italic text-gray-400">Last Name</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-[190px] mt-[30px]">
+            <div>
+                <p class="font-bold mb-[10px]">PHONE NUMBER</p>
+                <input id="callNum" class="border-solid border-2 border-black rounded-sm px-[30px]" type="text">
+                <p id="callerrorEmg" class="hidden text-[9px]">Cannot be Empty</p>
+                <p id="callerrorEmg2" class="hidden text-[9px]">Numbers only</p>
+                <p class="italic text-gray-400">(0000) 000 000</p>
+            </div>
+            <div>
+                <input id="emailholder" class="border-solid border-2 border-black rounded-sm px-[30px] mt-[29px]" type="email">
+                <p id="emailerrorEmg" class="hidden text-[9px]">Cannot be Empty</p>
+                <p class="italic text-gray-400">example@example.com</p>
+            </div>
+        </div>
+        <div class="mt-[30px]">
+            <p class="font-bold">SYMPTOMS</p>
+            <textarea  class="border-solid border-2 border-black py-[30px] px-[260px] mt-[20px]" name="" id="complain"></textarea>
+            <p id="texterrorEmg" class="hidden text-[9px]">Cannot be Empty</p>
+            <p class="italic text-gray-400">kindly keep as brief as possible</p>
+        </div>
+        <button id="submit2" class="bg-red-500 p-[8px] my-[20px] rounded-sm text-white">SUBMIT</button>
+
+    </div>
+</form>
+ <div id="tranperent2" class="hidden bg-black opacity-70 w=[580px] h-[584px] items-center py-[120px] px-[330px] ">
+    <div class="bg-white h-[340px] w-[600px] items-center rounded-lg p-[30px]">
+        <p class="font-bold mb-[10px] text-3xl">DIAGNOSIS</p>
+        <div id="replace">
+            <!-- <div class="flex justify-between ">
+                <p>First Name:  TOSIN </p>
+                <p>Last Name:  BENGAMIN</p>
+            </div> -->
+        </div>
+            <div>
+                <p class="font-bold mt-[10px]">Possible Ailment:</p>
+                <p id="posibleAilment"> </p>
+            </div>
+            <div>
+                <p class="font-bold mt-[10px]">Prescription:</p>
+                <p id="prescription"> </p>
+            </div>
+            <div>
+                <p class="font-bold mt-[10px]">Dosage:</p>
+                <p id="prescription"> Kindly contact your pharmacist </p>
+            </div>
+            <div class="flex justify-between align-center mt-[15px]">
+                <div class="flex gap-[10px]  cursor-pointer">
+                    <img class="h-[25px]" src="./image/download-pdf.png" alt="">
+                    <p>Download PDF</p>
+                </div>
+                <button id="close2" class="bg-gray-300 px-[10px] py-[3px]">CLOSE</button>
+            </div>
+    </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
